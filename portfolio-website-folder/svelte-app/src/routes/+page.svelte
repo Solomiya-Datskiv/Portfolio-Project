@@ -7,10 +7,93 @@
     });
 </script>
 
-<h1>Welcome to LeArt</h1>
-<p>This is Homepage of our Website for Buying and Selling Original Artworks!</p>
+    <!-- Background -->
+    <div class="background"></div>
+    
+<div class="container">
 
-<div class="gallery">
+
+    <!-- Title -->
+    <h1 class="title">Solomiya Datskiv</h1>
+    <h3 class="subtitle">creative portfolio</h3>
+
+    <!-- Top Icons -->
+    <div class="top-icons">
+        <img src="/icons/instagram.svg" alt="Instagram" class="icon" />
+        <img src="/icons/github.svg" alt="GitHub" class="icon" />
+        <img src="/icons/theme-toggle.svg" alt="Toggle Theme" class="icon" />
+    </div>
+
+</div>
+
+
+<style>
+    /* General Styling */
+
+
+    .container {
+        position: relative;
+        text-align: left;
+        width: 100vw;
+        height: 60vh;
+        overflow: hidden;
+        /* background: linear-gradient(to bottom, #f3e7e1, #8ca0b3);
+        color: black; */
+    }
+
+    /* Background Image */
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/Self portrait.png'); /* Adjust path if needed */
+        background-size: 90%;
+        background-position: center;
+        z-index: -1;
+    }
+
+    /* Header Section */
+    .title {
+        font: 'Yeseva One', serif;
+        font-size: 4rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-top: 10%;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        color: darkred;
+        font-weight: bold;
+    }
+
+
+    /* Top Icons */
+    .top-icons {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+</style>
+
+
+
+
+
+
+
+
+<!-- <div class="gallery">
     <Card title="Card 1" description="The first card" />
     <Card title="Card 2" description="The second card" />
     <Card title="Card 3" description="The third card" />
@@ -68,6 +151,6 @@
     /* Exclude the first and last card from being affected by nth-child styling */
     :global(.gallery > .card:not(:first-child):not(:last-child)) {
         border-radius: 18px; /* Softens edges for middle cards */
-    }
+    } 
 
-</style>
+</style> -->

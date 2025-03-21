@@ -1,11 +1,11 @@
-<footer>
-    <p>&copy; 2025 LeArt. All rights reserved.</p>
+<!-- <footer>
+    <p>&copy; 2025 Solomiya Datskiv. All rights reserved.</p>
 </footer>
 
 
 <style>
     footer {
-        background-color: #343a40;
+        background-color: rgb(0, 0, 0);
         color: white;
         text-align: center;
         padding: 1rem;
@@ -22,4 +22,4 @@
             font-size: 0.9rem;
         }
     }
-</style>
+</style> -->

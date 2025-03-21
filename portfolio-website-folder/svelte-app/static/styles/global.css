@@ -2,15 +2,23 @@
    Global Styles with CSS Variables
    ============================== */
 
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Yeseva+One&family=Cherry+Cream+Soda&display=swap');
+
+
    :root {
+
+        /* Font Variables */
+        --font-primary: 'Inter', sans-serif;
+        --font-h1: 'Yeseva One', serif;
+        --font-h2: 'Cherry Cream Soda', cursive;    
+
     /* Color Variables */
     --primary-color: #000000;
-    --background-color: #FFF;
+    --background-color: #eae0dc;
     --text-color: #333;
-    --link-hover-color: #b30000;
+    --link-hover-color: #731211;
 
     /* Font Variables */
-    --font-family: 'Arial', sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.6;
 
@@ -48,6 +56,22 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin-bottom: var(--spacing-small);
 }
+
+
+   h1 {
+    font-family: var(--font-h1);
+    font-size: 2.5rem; /* Adjust size as needed */
+}
+
+h2 {
+    font-family: var(--font-h2);
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+
 
 /* ==============================
    Paragraphs

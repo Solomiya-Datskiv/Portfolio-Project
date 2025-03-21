@@ -6,12 +6,24 @@
     });
 </script>
 
+<div class="background"></div>
+
 <section class="about-container">
-    <img src="/about-img.jpg" alt="About us" class="about-image">
+    <img src="/portfolio-picture.png" alt="About us" class="about-image">
     <div class="about-text">
-        <h1>About Us</h1>
-        <p> LeArt is a unique platform dedicated to connecting artists and buyers who appreciate original artworks and handmade creations. Our mission is to support independent artists by providing a space where they can showcase and sell their work, while art lovers can discover and purchase truly one-of-a-kind pieces.
-        Whether you're an artist looking to share your creativity or a collector searching for something special, LeArt is the perfect destination for art enthusiasts.</p>
+        <h1>ABOUT</h1>
+        <li><section class="bulletpoint">
+            <img src="/bulletpoint.png" alt="bulletpoint"> Computing in Interactive Digital Art and Design<br>                          
+            South East Technological University (Carlow, Ireland)  </li>
+
+        <li><section class="bulletpoint">
+            <img src="/bulletpoint.png" alt="bulletpoint"> Art with Animation Studies, Level 5<br>                                                 
+            Ormonde College of Further Education (Kilkenny, Ireland)  </li>
+        <li><section class="bulletpoint">
+            <img src="/bulletpoint.png" alt="bulletpoint"> Design of Small Architectural Objects<br>                                             
+            Ivan Trush College of Applied Arts and Crafts (Lviv, Ukraine)   </li>
+
+    
     </div>
     <aside class="about-aside">
         <h4>Our Vision</h4>
@@ -21,23 +33,37 @@
             an aesthetically pleasing and accessible platform for buying and selling original art. We 
             want to make our webpage a space designed for creative, artistic people and make it easy to 
             use for everyone, beginners and professionals.</p>
+            <li>  </li>
+            <li>  </li>
     </aside>
 
 </section>
 
 <style>
-    .about-container {
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #a4b5c3;
+        background-size: 90%;
+        background-position: center;
+        z-index: -1;
+    }
+
+
+.about-container {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-columns: 0.65fr 1.4fr;
     grid-template-areas:
         "image text"
         "image aside";
     gap: 30px;
-    align-items: center;
+    align-items: left;
 
     padding-bottom: 40px;
-    background: var(--background-color);
-    
+    background: #a4b5c3;
 
     /* 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);*/
@@ -46,7 +72,7 @@
 h1 {
     color: #7B5E46;
     font-size: 2.7em;
-    text-align: center;
+    text-align: left;
 }
 .about-image{
     grid-area: image;
@@ -59,6 +85,7 @@ h1 {
     font-size: 1.1em;
     line-height: 1;
     color: #7B5E46;
+    text-align: left;
 }
 .about-aside{
     grid-area: aside;
