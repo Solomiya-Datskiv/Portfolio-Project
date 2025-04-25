@@ -12,17 +12,17 @@
         <li><a href="/" class="logo">
             <img src="/website-logo.png" alt="Website Logo">
         </a></li>
-        <li><a href="/about"><h2>ABOUT</h2></a></li>
-        <li><a href="/works"><h2>WORKS</h2></a></li>
-        <li><a href="/contact"><h2>CONTACT</h2></a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/works">WORKS</a></li>
+        <li><a href="/contact">CONTACT</a></li>
     </ul>
 </nav>
 
 <style>
     .nav {
-
+        font-family: 'Cherry Cream Soda', cursive;    
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1.rem;
     }
         /* Menu Button */
         .menu-btn {
@@ -34,7 +34,7 @@
 
     /* Logo */
     .logo img {
-        width: 60px;
+        width: 45px;
     
     }
 
@@ -46,6 +46,10 @@
         list-style: none;
         padding: 0;
         margin: 0;
+    }
+
+    .nav ul li {
+        text-align: center;
     }
 
     .nav ul li a {
@@ -64,7 +68,6 @@
             top: 90px;
             left: 0;
             width: 100%;
-            background: #007bff;
             text-align: left;
             padding: 1rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

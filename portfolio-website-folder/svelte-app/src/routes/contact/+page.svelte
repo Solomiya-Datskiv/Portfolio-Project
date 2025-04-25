@@ -44,7 +44,7 @@
 /* ===== CONTACT HEADER ===== */
 .contact-container {
     text-align: center;
-    padding: 40px;
+    padding-top: 30px;
 }
 
 .contact-header h1 {

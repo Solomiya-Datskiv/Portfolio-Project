@@ -9,9 +9,15 @@
 <div class="background"></div>
 
 <section class="about-container">
-    <img src="/portfolio-picture.png" alt="About us" class="about-image">
+    <div class="image-wrapper">
+        <img src="/portfolio-picture.png" alt="Solomiya Photograph" class="about-image">
+        <h1 class="about-title">ABOUT</h1>
+        <p class="about-subtitle1">HI! I'M SOLOMIYA, ARTIST AND</p>
+        <p class="about-subtitle2"> DESIGNER BASED IN IRELAND</p>
+      </div>
+
     <div class="about-text">
-        <h1>ABOUT</h1>
+        <h2>EDUCATION</h2>
         <li><section class="bulletpoint">
             <img src="/bulletpoint.png" alt="bulletpoint"> Computing in Interactive Digital Art and Design<br>                          
             South East Technological University (Carlow, Ireland)  </li>
@@ -26,16 +32,20 @@
     
     </div>
     <aside class="about-aside">
-        <h4>Our Vision</h4>
-        <p>Our platform focuses on creating enjoyable and useful experiences for all users, both 
-            artists who want to sell their creations and customers who want to explore and purchase 
-            them. We will provide not just a shopping website, but 
-            an aesthetically pleasing and accessible platform for buying and selling original art. We 
-            want to make our webpage a space designed for creative, artistic people and make it easy to 
-            use for everyone, beginners and professionals.</p>
-            <li>  </li>
-            <li>  </li>
-    </aside>
+        <h2>SKILLS</h2>
+        <ul class="skills-list">
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Digital Illustration </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Adobe Creative Suite </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Figma, Penpot, Canva </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Animation/Storyboarding </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> UI Design </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Graphic Design </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Microsoft Office </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> UI Programming </section></li>
+        </ul>
+        
+
+            </aside>
 
 </section>
 
@@ -47,7 +57,7 @@
         width: 100%;
         height: 100%;
         background: #a4b5c3;
-        background-size: 90%;
+        background-size: 100%;
         background-position: center;
         z-index: -1;
     }
@@ -55,22 +65,58 @@
 
 .about-container {
     display: grid;
-    grid-template-columns: 0.65fr 1.4fr;
+    grid-template-columns: 0.75fr 1.4fr;
     grid-template-areas:
         "image text"
         "image aside";
-    gap: 30px;
+    gap: 40px;
     align-items: left;
 
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     background: #a4b5c3;
 
     /* 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);*/
 }
 
-h1 {
-    color: #7B5E46;
+.image-wrapper {
+  position: relative;
+  grid-area: image;
+  margin-top: -50px; /* move image up by 50px */
+}
+
+.about-title {
+  position: absolute;
+  top: 0.5%;
+  left: 0%;
+  font-size: 7em;
+  color: white;
+  font-family: 'Cinzel', serif;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.about-subtitle1 {
+ font-family: 'Cherry Cream Soda', cursive; 
+  position: absolute;
+  top: 25%;
+  left: 1%;
+  font-size: 1.2em;
+  color: white;
+  text-align: left;
+}
+
+.about-subtitle2 {
+ font-family: 'Cherry Cream Soda', cursive; 
+  position: absolute;
+  top: 29%;
+  left: 1%;
+  font-size: 1.2em;
+  color: white;
+  text-align: left;
+}
+
+
+h2 {
     font-size: 2.7em;
     text-align: left;
 }
@@ -84,17 +130,44 @@ h1 {
     grid-area: text;
     font-size: 1.1em;
     line-height: 1;
-    color: #7B5E46;
     text-align: left;
 }
 .about-aside{
     grid-area: aside;
-    background: #6f5336;
-    color:antiquewhite;
     padding: 1rem;
     border-left: 4px solid #3E2C24;
     border-radius: 10px;
+    text-align: left;
+
 }
+
+.skills-list {
+    columns: 2; /* splits into two columns */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 40px; /* space between columns */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 1rem;
+}
+
+.bulletpoint {
+    display: flex;
+    align-items: center;
+}
+
+.bulletpoint img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
 
 @media (max-width: 768px){
     .about-container{

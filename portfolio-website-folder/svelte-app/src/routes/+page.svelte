@@ -64,6 +64,7 @@
     }
 
     .subtitle {
+        font-family: 'Cherry Cream Soda', cursive;  
         font-size: 1.5rem;
         color: darkred;
         font-weight: bold;

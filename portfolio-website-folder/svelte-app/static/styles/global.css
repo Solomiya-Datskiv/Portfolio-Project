@@ -29,6 +29,13 @@
     --max-width: 1200px;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #eae0dc;
+        --background-color: #000000;
+    }
+  }
+
 /* ==============================
    Global Reset - Ensures consistency across browsers
    ============================== */
