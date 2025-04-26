@@ -10,23 +10,20 @@
     let fullscreenImage: string | null = null; // store which image is open in fullscreen
 
     const imagesPaths = [
-        "/painting/painting1.jpg",
-        "/painting/painting2.jpg",
-        "/painting/painting3.png",
-        "/painting/painting4.jpg",
-        "/painting/painting5.jpg",
-        "/painting/painting6.JPG",
-        "/painting/painting7.jpg",
-        "/painting/painting8.jpg",
-        "/painting/painting9.jpg",
-        "/painting/painting10.jpg",
-        "/painting/painting11.jpg",
-        "/painting/painting12.jpg",
-        "/painting/painting13.jpg",
-        "/painting/painting14.jpg",
-        "/painting/painting15.jpg",
-        "/painting/painting16.JPG",
-        "/painting/painting17.jpg"
+        "/drawing/drawing1.jpg",
+        "/drawing/drawing2.jpg",
+        "/drawing/drawing3.jpg",
+        "/drawing/drawing4.jpg",
+        "/drawing/drawing5.jpg",
+        "/drawing/drawing6.jpg",
+        "/drawing/drawing7.jpg",
+        "/drawing/drawing8.JPG",
+        "/drawing/drawing9.JPG",
+        "/drawing/drawing10.JPG",
+        "/drawing/drawing11.JPG",
+        "/drawing/drawing12.jpg",
+        "/drawing/drawing13.jpg",
+        "/drawing/drawing14.jpg",
     ];
 
     function scrollLeft() {
@@ -113,7 +110,7 @@
 </script>
 
 <div transition:fade>
-    <h2>PAINTING</h2>
+    <h2>DRAWING</h2>
 
     <div class="gallery-container">
         <button class="scroll-button left" on:click={scrollLeft}>&lt;</button>
@@ -197,7 +194,7 @@ h2 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 40px;
-    padding: 0 calc(50% - 200px);
+    padding: 0 calc(50% - 130px);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     height: 420px;

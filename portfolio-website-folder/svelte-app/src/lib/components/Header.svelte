@@ -23,7 +23,7 @@
         justify-content: space-between;
         background: rgba(255, 255, 255, 0.5); /* 70% Transparent */
         border-radius: 50px;
-        padding: 0.05rem 1.6rem;
+        padding: 0rem 1.6rem;
         margin: 20px auto;
         max-width: 90%;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More visible shadow */

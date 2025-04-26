@@ -10,23 +10,14 @@
     let fullscreenImage: string | null = null; // store which image is open in fullscreen
 
     const imagesPaths = [
-        "/painting/painting1.jpg",
-        "/painting/painting2.jpg",
-        "/painting/painting3.png",
-        "/painting/painting4.jpg",
-        "/painting/painting5.jpg",
-        "/painting/painting6.JPG",
-        "/painting/painting7.jpg",
-        "/painting/painting8.jpg",
-        "/painting/painting9.jpg",
-        "/painting/painting10.jpg",
-        "/painting/painting11.jpg",
-        "/painting/painting12.jpg",
-        "/painting/painting13.jpg",
-        "/painting/painting14.jpg",
-        "/painting/painting15.jpg",
-        "/painting/painting16.JPG",
-        "/painting/painting17.jpg"
+        "/otherprojects/project1.JPG",
+        "/otherprojects/project2.JPG",
+        "/otherprojects/project3.JPG",
+        "/otherprojects/project4.jpeg",
+        "/otherprojects/project5.jpg",
+        "/otherprojects/project6.jpg",
+        "/otherprojects/project7.jpg"
+
     ];
 
     function scrollLeft() {
@@ -113,7 +104,7 @@
 </script>
 
 <div transition:fade>
-    <h2>PAINTING</h2>
+    <h2>OTHER PROJECTS</h2>
 
     <div class="gallery-container">
         <button class="scroll-button left" on:click={scrollLeft}>&lt;</button>
@@ -197,7 +188,7 @@ h2 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 40px;
-    padding: 0 calc(50% - 200px);
+    padding: 0 calc(50% - 100px);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     height: 420px;
