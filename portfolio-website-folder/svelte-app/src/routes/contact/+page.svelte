@@ -4,13 +4,24 @@
     onMount(() => {
         console.log("Contact Page Loaded");
     });
+
+    import { fly } from 'svelte/transition';
 </script>
 
+<div in:fly={{ y: 200, duration: 600 }}>
 <section class="contact-container">
+    <div class="top-icons">
+        <a href="/" class="icon" >
+            <img src="/website-logo.png" alt="Website Logo">
+
+    </div>
+    
     <!-- Contact Heading -->
     <div class="contact-header">
         <h1>CONTACT</h1>
         <p>LET'S WORK TOGETHER!</p>
+
+
     </div>
 
     <!-- Footer Section -->
@@ -39,18 +50,23 @@
         BTW: STEALING IDEAS AND ART IS BAD FOR YOUR KARMA. DON'T BE LIKE THIS :)
     </p>
 </section>
+</div>
 
 <style>
 /* ===== CONTACT HEADER ===== */
 .contact-container {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
 .contact-header h1 {
     font-family: 'Yeseva One', serif;
-    font-size: 4rem;
-    margin-bottom: 10px;
+    font-size: 7rem;
+    font-weight: 100;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    text-align: left;
 }
 
 .contact-header p {
@@ -58,6 +74,8 @@
     font-size: 1.5rem;
     color: #731211;
     font-weight: bold;
+    text-align: left;
+
 }
 
 /* ===== FOOTER SECTION ===== */
@@ -102,4 +120,23 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+
+.top-icons {
+        position: absolute;
+        top: 12rem;
+        right: 3.5rem;
+        display: flex;
+    }
+
+    .icon img {
+        width: 160px;
+        height: 160px;
+        filter: drop-shadow(0 2px 10px #eae0dc);
+        transition: transform 0.3s ease;
+    }
+
+    .icon:hover img {
+        transform: scale(1.2);
+    }
 </style>

@@ -4,9 +4,13 @@
     onMount(() => {
         console.log("About Page Loaded");
     });
+
+    import { fly } from 'svelte/transition';
 </script>
 
 <div class="background-works"></div>
+
+<div in:fly={{ y: 200, duration: 600 }}>
 
 <section class="works-container">
     <h1 class="works-title">WORKS</h1>
@@ -41,6 +45,9 @@
     
 </section>
 
+</div>
+
+
 <style>
 /* Background gradient */
 .background-works {
@@ -64,11 +71,13 @@
 
 /* Title */
 .works-title {
+    font-family: 'Yeseva One', serif;
+    text-transform: uppercase;
+    font-weight: 100;
     position: absolute;
     top: 0px;
     left: 50px;
-    font-size: 5em;
-    font-family: 'Cinzel', serif;
+    font-size: 7em;
     color: black;
     text-shadow: 2px 2px 2px #ccc;
 }
@@ -105,15 +114,6 @@
     color: #2e2e2e;
 }
 
-.works-title {
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    font-size: 5em;
-    font-family: 'Cinzel', serif;
-    color: black;
-    text-shadow: 2px 2px 2px #ccc;
-}
 
 
 /* Circular work images */

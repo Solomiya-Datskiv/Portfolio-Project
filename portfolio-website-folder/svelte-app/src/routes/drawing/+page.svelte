@@ -206,7 +206,7 @@ h2 {
 }
 
 .artwork-gallery img {
-    height: 300px;
+    height: 250px;
     width: auto;
     object-fit: contain;
     scroll-snap-align: center;

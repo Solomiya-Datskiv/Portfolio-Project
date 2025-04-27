@@ -1,32 +1,52 @@
-<script>
+<script lang="ts">
+    import { page } from '$app/stores';  
+
     let isOpen = false;
+    $: currentPath = $page.url.pathname;
 </script>
 
 <nav class="nav">
-
     <ul class:open={isOpen}>
         <!-- Menu Button (Left) -->
         <li><button class="menu-btn">☰</button></li>
 
-        <!-- Logo -->
-        <li><a href="/" class="logo">
-            <img src="/website-logo.png" alt="Website Logo">
-        </a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="/works">WORKS</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <!-- Logo (home link) -->
+        <li>
+            <a href="/" class="nav-item logo {currentPath === '/' ? 'selected' : ''}">
+                <img src="/website-logo.png" alt="Website Logo">
+            </a>
+        </li>
+
+        <!-- Center Links -->
+        <div class="center-links">
+            <li><a href="/about" class="nav-item {currentPath === '/about' ? 'selected' : ''}">ABOUT</a></li>
+            <li><a href="/works" class="nav-item {currentPath === '/works' ? 'selected' : ''}">WORKS</a></li>
+            <li><a href="/contact" class="nav-item {currentPath === '/contact' ? 'selected' : ''}">CONTACT</a></li>
+        </div>
     </ul>
 </nav>
 
 <style>
     .nav {
-        font-family: 'Cherry Cream Soda', cursive;    
-        text-align: center;
-        font-size: 1.rem;
+        font-family: 'Cherry Cream Soda', cursive;
+        font-size: 1.2rem;
+        width: 100%;
     }
-        /* Menu Button */
-        .menu-btn {
-        font-size: 2.0rem;
+
+    .nav ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Menu button */
+    .menu-btn {
+        font-size: 2rem;
         background: none;
         border: none;
         cursor: pointer;
@@ -35,158 +55,74 @@
     /* Logo */
     .logo img {
         width: 45px;
-    
     }
 
-    /* Navigation */
-    .nav ul {
-        align-items: center;
+    /* Center links */
+    .center-links {
         display: flex;
-        gap: 30px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        justify-content: center;
+        flex-grow: 1;
+        gap: 60px;
+        position: relative;
     }
 
-    .nav ul li {
-        text-align: center;
-    }
-
-    .nav ul li a {
+    /* Nav items */
+    .nav-item {
+        position: relative;
         text-decoration: none;
         color: black;
+        padding: 10px 20px;
+        transition: color 0.3s ease;
     }
 
-    /* Mobile Navigation: Show Burger Menu */
+    /* Black circle - always visible but scaled down when not active */
+    .nav-item::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: transform 0.4s ease;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+    /* Selected (active) state - scales up and becomes more visible */
+    .nav-item.selected::before,
+    .logo.selected::before {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+
+    /* Highlight active link */
+    .nav-item.selected,
+    .logo.selected {
+        color: white;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: transform 0.4s ease;
+    }
+
+    .logo.selected {
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+    }
+
+    /* Mobile Responsive */
     @media (max-width: 768px) {
-
-
         .nav ul {
-            display: none; /* Hide menu by default */
             flex-direction: column;
-            position: absolute;
-            top: 90px;
-            left: 0;
-            width: 100%;
-            text-align: left;
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255,255,255,0.95);
         }
 
-        .nav ul.open {
-            display: flex; /* Show menu when isOpen is true */
-        }
-
-        .nav ul li {
-            padding: 10px 20px;
+        .center-links {
+            flex-direction: column;
+            margin-top: 10px;
         }
     }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <script>
-    let isOpen = false; // Menu state (open/closed)
-</script>
-
-
- Navigation container 
-<nav class="nav">
-     Burger Menu Button (for small screens) 
-    <button class="burger" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
-        ☰
-    </button>
-
-    Navigation links
-    <ul class:open={isOpen}>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li> 
-    </ul>
-</nav>
-
-
-<style>
-    /* Base Navigation Styling */
-    .nav {
-        background-color: #007bff;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav ul li {
-        display: inline-block;
-    }
-
-    .nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    /* 🍔 Burger Menu (Hidden on Large Screens) */
-    .burger {
-        display: none;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-    }
-
-    /* Mobile Navigation: Show Burger Menu */
-    @media (max-width: 768px) {
-        .burger {
-            display: block; /* Show burger icon */
-            left: 90%;
-        }
-
-        .nav ul {
-            display: none; /* Hide menu by default */
-            flex-direction: column;
-            position: absolute;
-            top: 90px;
-            left: 0;
-            width: 100%;
-            background: #007bff;
-            text-align: left;
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav ul.open {
-            display: flex; /* Show menu when isOpen is true */
-        }
-
-        .nav ul li {
-            padding: 10px 20px;
-        }
-    }
-</style>  -->

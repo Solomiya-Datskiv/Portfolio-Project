@@ -4,10 +4,12 @@
     onMount(() => {
         console.log("About Page Loaded");
     });
+    import { fly } from 'svelte/transition';
 </script>
 
 <div class="background"></div>
 
+<div in:fly={{ y: 200, duration: 600 }}>
 <section class="about-container">
     <div class="image-wrapper">
         <img src="/portfolio-picture.png" alt="Solomiya Photograph" class="about-image">
@@ -49,6 +51,8 @@
 
 </section>
 
+</div>
+
 <style>
     .background {
         position: absolute;
@@ -69,7 +73,7 @@
     grid-template-areas:
         "image text"
         "image aside";
-    gap: 40px;
+    gap: 60px;
     align-items: left;
 
     padding-bottom: 0px;
@@ -86,13 +90,15 @@
 }
 
 .about-title {
+    font-family: 'Yeseva One', serif;
+    text-transform: uppercase;
+    font-weight: 100;
   position: absolute;
   top: 0.5%;
   left: 0%;
   font-size: 7em;
   color: white;
-  font-family: 'Cinzel', serif;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 15px 2px 4px #000;
 }
 
 .about-subtitle1 {
@@ -134,8 +140,6 @@ h2 {
 }
 .about-aside{
     grid-area: aside;
-    padding: 1rem;
-    border-left: 4px solid #3E2C24;
     border-radius: 10px;
     text-align: left;
 

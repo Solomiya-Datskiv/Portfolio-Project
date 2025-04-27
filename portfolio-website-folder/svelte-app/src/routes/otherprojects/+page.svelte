@@ -188,7 +188,7 @@ h2 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 40px;
-    padding: 0 calc(50% - 100px);
+    padding: 0 calc(50% - 70px);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     height: 420px;
@@ -200,7 +200,7 @@ h2 {
 }
 
 .artwork-gallery img {
-    height: 300px;
+    height: 250px;
     width: auto;
     object-fit: contain;
     scroll-snap-align: center;
