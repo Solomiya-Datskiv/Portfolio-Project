@@ -1,9 +1,8 @@
-<script> 
+<script>  
     import { Navigation } from "$lib";
 </script>
 
 <header>
-
     <!-- Navigation -->
     <Navigation />
 
@@ -21,14 +20,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: rgba(255, 255, 255, 0.5); /* 70% Transparent */
+        background: rgba(255, 255, 255, 0.5);
         border-radius: 50px;
-        padding: 0rem 1.6rem;
+        padding: 0.5rem 1.6rem;
         margin: 20px auto;
         max-width: 90%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More visible shadow */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
     }
-
 
     /* Theme Toggle */
     .theme-toggle {
@@ -71,6 +70,17 @@
         left: 20px;
         background: #fff;
     }
-</style>
 
- 
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        header {
+            padding: 0.5rem 1rem;
+            margin: 10px auto;
+            border-radius: 30px;
+        }
+
+        .theme-toggle {
+            order: 3;
+        }
+    }
+</style>

@@ -170,6 +170,9 @@ h2 {
     margin-right: 10px;
 }
 
+h2{
+    text-shadow: 15px 5px 15px #eae0dc;
+}
 
 
 

@@ -127,7 +127,7 @@
         <button class="scroll-button right" on:click={scrollRight}>&gt;</button>
     </div>
 
-    <!-- Custom Scrollbar -->
+    <!-- Scrollbar -->
     <input 
         type="range" 
         min="0" 
@@ -246,7 +246,7 @@ h2 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* Custom Scrollbar Styling */
+/* Scrollbar Styling */
 .scrollbar {
     width: 80%;
     margin: 1rem auto 0 auto;

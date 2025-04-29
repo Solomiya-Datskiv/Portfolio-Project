@@ -15,7 +15,6 @@
             <img src="/website-logo.png" alt="Website Logo">
 
     </div>
-    
     <!-- Contact Heading -->
     <div class="contact-header">
         <h1>CONTACT</h1>

@@ -27,7 +27,7 @@
     <!-- Title Section -->
     <div class="title-container">
         <h1 class="title">SOLOMIYA</h1>
-        <h1 class="title">DAtSKIV</h1>
+        <h1 class="title">DATSKIV</h1>
         <h3 class="subtitle">creative portfolio</h3>
     </div>
     

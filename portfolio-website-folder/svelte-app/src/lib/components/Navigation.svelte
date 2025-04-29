@@ -3,12 +3,24 @@
 
     let isOpen = false;
     $: currentPath = $page.url.pathname;
+
+    import MobileMenu from '$lib/components/Menu.svelte';
+
+    let menuOpen = false;
+
+    function closeMenu() {
+    menuOpen = false;
+    }
+
 </script>
 
 <nav class="nav">
     <ul class:open={isOpen}>
         <!-- Menu Button (Left) -->
-        <li><button class="menu-btn">☰</button></li>
+        <button class="menu-btn" on:click={() => menuOpen = true}>☰</button>
+
+        <!-- Menu -->
+        <MobileMenu {menuOpen} {closeMenu} />
 
         <!-- Logo (home link) -->
         <li>
@@ -111,18 +123,36 @@
     .logo.selected {
         background: rgba(255, 255, 255, 0.7);
         position: absolute;
+
     }
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
         .nav ul {
-            flex-direction: column;
-            background: rgba(255,255,255,0.95);
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .menu-btn-container {
+            display: block; /* Show menu button on mobile */
+            order: 1;
+        }
+
+        .logo-container {
+            order: 2;
+            margin: 0 auto;
         }
 
         .center-links {
-            flex-direction: column;
-            margin-top: 10px;
+            display: none; /* Hide center links on mobile */
         }
+
+        /* Adjust header for mobile */
+        header {
+            padding: 0.5rem 1rem;
+            margin: 10px auto;
+            border-radius: 30px;
+        }
+
     }
 </style>
