@@ -74,13 +74,16 @@
     /* Mobile Responsive */
     @media (max-width: 768px) {
         header {
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 1rem;
             margin: 10px auto;
             border-radius: 30px;
         }
 
         .theme-toggle {
             order: 3;
+        }
+        img{
+            scale: 0.5;
         }
     }
 </style>

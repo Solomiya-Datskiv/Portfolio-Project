@@ -14,7 +14,7 @@
 </div>
 
 <div class="container">
-    <!-- Top Icons - moved to top right -->
+    <!-- Top Icons -->
     <div class="top-icons">
         <a href="https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
             <img src="/instaSign.png" alt="Instagram"/>
@@ -30,121 +30,149 @@
         <h1 class="title">DATSKIV</h1>
         <h3 class="subtitle">creative portfolio</h3>
     </div>
-    
 </div>
 
 <style>
-    /* General Styling */
-    :global(body) {
-        margin: 0;
-        padding: 0;
-        height: 100vh; /* Changed from min-height to height */
-        overflow: hidden; /* Prevent scrolling */        
-    }
+:global(html, body) {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
-    .container {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 2rem;
-        padding-left: 0.1rem;
-        box-sizing: border-box;
-    }
+.container {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1; /* Above background */
+}
 
-    /* Background with gradient overlay */
-    .background-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
+/* Background */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
 
-    .background {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url('/Self portrait.png');
-        background-size: cover;
-        background-position: center;
-    }
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Self portrait.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .gradient-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent 0%, rgba(164, 181, 195, 1) 100%);
-    }
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(164, 181, 195, 1) 100%);
+}
 
-    /* Title Section */
-    .title-container {
-        margin-top: 10%;
-        text-align: left;
-    }
+/* Title */
+.title-container {
+    position: fixed; 
+    text-align: left;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+}
 
-    .title {
-        color: #eae0dc;
-        font-family: 'Yeseva One', serif;
-        font-size: 6rem;
-        font-weight: 100;
-        text-transform: uppercase;
-        margin: 0;
-        line-height: 1;
-        text-shadow: 5px 2px 2px #000;
-    }
+.title {
+    color: #eae0dc;
+    font-family: 'Yeseva One', serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 5px 2px 2px #000;
+}
 
-    .subtitle {
-        font-family: 'Cherry Cream Soda', cursive;  
-        font-size: 2rem;
-        color: darkred;
-        font-weight: bold;
-        margin-top: 1rem;
-        text-shadow: 5px -150px 300px rgb(0, 41, 74);
+.subtitle {
+    font-family: 'Cherry Cream Soda', cursive;  
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: darkred;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
 
-    }
+/* Top Icons */
+.top-icons {
+    position: fixed;
+    top: 45.5%;
+    right: 10.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
 
-    /* Top Icons */
-    .top-icons {
-        position: absolute;
-        top: 11rem;
-        right: 0.5rem;
-        display: flex;
-        flex-direction: column; /* Changed from row to column */
-        gap: 0.5rem; /* spacing between icons */
-    }
+.icon img {
+    width: clamp(40px, 3vw, 50px);
+    height: clamp(40px, 3vw, 50px);
+    filter: drop-shadow(0 2px 10px #eae0dc);
+    transition: transform 0.3s ease;
+}
 
-    .icon img {
-        width: 40px;
-        height: 40px;
-        filter: drop-shadow(0 2px 10px #eae0dc);
-        transition: transform 0.3s ease;
-    }
+.icon:hover img {
+    transform: scale(1.2);
+}
 
-    .icon:hover img {
-        transform: scale(1.2);
-    }
-
-
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
+    /* Tablet Landscape and Large Phones */
+    @media (max-width: 1024px) and (min-width: 769px) {
         .title {
-            font-size: 3rem;
+            font-size: 4.5rem;
         }
         
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
-        
-
         .top-icons {
-            top: 1rem;
-            right: 1rem;
-        }
+        top: 57.0%;
+        right: 5.5%;
+       }
     }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .top-icons {
+        position: fixed;
+        top: 35.5%;
+        left: -550px;             /* Align with title's horizontal padding */    }
+
+    .title-container {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .top-icons {
+        position: fixed;
+        gap: 0.8rem;
+        top: 35.5%;
+        left: -250px;  
+         }
+}
 </style>

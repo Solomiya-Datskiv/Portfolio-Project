@@ -131,28 +131,52 @@
         .nav ul {
             justify-content: space-between;
             padding: 0 1rem;
+            height: 60px; /* Fixed height for mobile header */
         }
 
         .menu-btn-container {
-            display: block; /* Show menu button on mobile */
-            order: 1;
+            display: block; /* Show menu button */
+            order: 1; /* Force to left side */
+            z-index: 10;
         }
 
         .logo-container {
-            order: 2;
-            margin: 0 auto;
+            order: 2; /* Center position */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .center-links {
-            display: none; /* Hide center links on mobile */
+            display: none; /* Hide regular navigation links */
         }
 
-        /* Adjust header for mobile */
-        header {
-            padding: 0.5rem 1rem;
-            margin: 10px auto;
-            border-radius: 30px;
+        /* Adjust logo size for mobile */
+        .logo img {
+            width: 40px;
         }
 
+        /* Adjust menu button size */
+        .menu-btn {
+            font-size: 1.8rem;
+        }
+
+        /* Ensure selected logo stays properly positioned on mobile */
+        .logo.selected {
+            position: relative;
+            transform: none;
+        }
     }
+
+    /* For very small phones */
+    @media (max-width: 480px) {
+        .logo img {
+            width: 35px;
+        }
+        
+        .menu-btn {
+            font-size: 1.6rem;
+        }
+    }
+
 </style>

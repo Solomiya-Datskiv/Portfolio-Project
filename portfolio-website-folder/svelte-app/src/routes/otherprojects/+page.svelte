@@ -275,4 +275,85 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+    .artwork-gallery {
+        padding: 0 2rem;
+        gap: 20px;
+        height: 320px;
+    }
+
+    .artwork-gallery img {
+        height: 180px;
+    }
+
+    .artwork-gallery img.center {
+        height: 260px;
+    }
+
+    .scroll-button {
+        font-size: 1.5rem;
+        padding: 6px 12px;
+    }
+
+    .scrollbar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .artwork-gallery {
+        padding: 0 calc(50% - 50px);
+        gap: 16px;
+        height: 260px;
+    }
+
+    .artwork-gallery img {
+        height: 140px;
+    }
+
+    .artwork-gallery img.center {
+        height: 200px;
+    }
+
+    .scroll-button {
+        font-size: 1.2rem;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+
+    .artwork-gallery {
+        padding: 0 calc(50% - 50px);
+        gap: 12px;
+        height: 200px;
+    }
+
+    .artwork-gallery img {
+        height: 100px;
+    }
+
+    .artwork-gallery img.center {
+        height: 150px;
+    }
+
+    .scroll-button {
+        font-size: 1rem;
+        padding: 3px 8px;
+    }
+
+    .scrollbar {
+        width: 95%;
+    }
+}
 </style>

@@ -3,6 +3,7 @@
 	export let closeMenu: () => void;
 </script>
 
+
 {#if menuOpen}
 	<div class="menu-overlay">
 		<button class="close-btn" on:click={closeMenu}>✕</button>
@@ -29,10 +30,10 @@
 {/if}
 
 <style>
-	.menu-overlay {
+.menu-overlay {
 		position: fixed;
 		inset: 0;
-		background: radial-gradient(circle at right, rgba(111, 9, 9, 0.7), #a4b5c3);
+		background: radial-gradient(circle at right, rgba(111, 9, 9, 0.8), #a4b5c3);
 		z-index: 1000;
 		display: flex;
 		flex-direction: column;
@@ -96,4 +97,54 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 	}
+
+	/* Mobile-specific adjustments */
+	@media (max-width: 768px) {
+
+        .close-btn {
+		font-size: 1.5rem;
+        }
+
+	.menu-logo {
+		width: 35px;
+	}
+
+        .overlay-links {
+		font-size: 2.8rem;
+	}
+
+		.overlay-links {
+			gap: 1.5rem;
+		}
+        .sub-links {
+		font-size: 1.1rem;
+	}
+		.sub-links {
+			gap: 0.8rem;
+			margin-left: clamp(5.5rem, 8vw, 6rem);
+		}
+
+		.menu-logo {
+			margin-left: 0.5rem;
+		}
+	}
+
+	/* Very small devices */
+	@media (max-width: 480px) {
+
+        .overlay-links {
+		font-size: 2rem;
+		margin-left: 1rem;
+	}
+		.overlay-links {
+            margin-top: 2rem;
+			gap: 1.2rem;
+		}
+
+		.sub-links {
+            font-size: 0.8rem;
+			gap: 0.6rem;
+		}
+	}
+
 </style>

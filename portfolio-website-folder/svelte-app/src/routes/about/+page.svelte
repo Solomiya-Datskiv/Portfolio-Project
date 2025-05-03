@@ -175,15 +175,81 @@ h2{
 }
 
 
+@media (max-width: 768px) {
+  .about-container {    
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
 
-@media (max-width: 768px){
-    .about-container{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "image"
-        "text"
-        "aside";
-        text-align: center;
-    }
+  .image-wrapper {
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .about-title {
+    text-align: left;
+
+    font-size: 3rem;
+    top: 10px;
+    left: 50%;
+    text-shadow: 4px 2px 2px #000;
+  }
+
+  .about-subtitle1,
+  .about-subtitle2 {
+    font-size: 1rem;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  .about-subtitle2 {
+    margin-bottom: 1rem;
+  }
+
+  .about-image {
+    width: 90%;
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+
+  .about-text,
+  .about-aside {
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .skills-list {
+    columns: 1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
 }
+
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle1,
+  .about-subtitle2 {
+    font-size: 0.9rem;
+  }
+
+  .skills-list {
+    font-size: 0.9rem;
+  }
+}
+
 </style>
