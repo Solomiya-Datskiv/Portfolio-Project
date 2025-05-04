@@ -30,7 +30,7 @@
 <nav class="nav">
 	<ul>
 		<!-- Left: Menu Button -->
-		<button class="menu-btn" on:click={() => menuOpen = true}>☰</button>
+		<li><button class="menu-btn" on:click={() => menuOpen = true}>☰</button></li>
 
 		<!-- Mobile Center Title -->
 				<!-- Center: Mobile Page Label or Logo with Selector -->
@@ -44,7 +44,7 @@
                     {/if}
                 </li>
 
-		<!-- Right: Logo (hidden on mobile) -->
+		<!-- Logo -->
 		<li class="logo-container">
 			<a href="/" class="nav-item logo {currentPath === '/' ? 'selected' : ''}">
 				<img src="/website-logo.png" alt="Website Logo" />
@@ -166,6 +166,17 @@
 		pointer-events: auto;
 	}
 
+    .nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative; /* for absolute children */
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
 
 	/* Responsive Styles */
     /* Tablet Landscape and Large Phones */
@@ -182,6 +193,8 @@
     }
 
 	@media (max-width: 768px) {
+
+        
         .nav-item.selected,
 	    .logo.selected {
         background: none;
@@ -203,7 +216,17 @@
 		.menu-btn {
 			font-size: 1.8rem;
 		}
+        .mobile-center {
+		display: block;
+		position: absolute;
+		left: 50%;
+		text-align: center;
+		pointer-events: none;
+	}
 
+	.mobile-center .nav-item {
+		pointer-events: auto;
+	}
 
 	}
 

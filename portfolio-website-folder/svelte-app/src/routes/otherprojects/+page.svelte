@@ -145,6 +145,10 @@
 {/if}
 
 <style>
+:global(body.dark) .scrollbar{
+    background: #eae0dc;
+}
+
 h2 {
     padding: 0rem 3rem;
     text-align: left;
@@ -276,9 +280,9 @@ h2 {
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1424px) {
     .artwork-gallery {
-        padding: 0 2rem;
+        padding: 0 calc(50% - 50px);
         gap: 20px;
         height: 320px;
     }

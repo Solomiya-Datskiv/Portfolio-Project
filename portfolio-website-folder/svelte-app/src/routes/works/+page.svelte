@@ -59,6 +59,18 @@
 </div>
 
 <style>
+:global(body.dark) .background-works{
+    background: linear-gradient(to bottom,  #731211, #a4b5c3);
+
+}
+:global(body.dark) .category::before{
+    background-color: #a4b5c3;
+}
+
+:global(body.dark) .works-title{
+    text-shadow: 10px 2px 2px #a4b5c3;
+}
+
 /* Background Layer Styling:
    Fullscreen gradient background placed behind content using absolute positioning. */
 .background-works {
@@ -86,7 +98,7 @@
     left: 20px;
     font-size: 7em;
     color: black;
-    text-shadow: 2px 2px 2px #ccc; /* subtle 3D effect */
+
 }
 
 .category {

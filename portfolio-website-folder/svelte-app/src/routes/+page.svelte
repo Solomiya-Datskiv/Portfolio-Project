@@ -1,6 +1,5 @@
-<script>
+<script> 
     import { onMount } from 'svelte';
-
     onMount(() => {
         console.log("Home Page Loaded");
     });
@@ -8,12 +7,12 @@
 
 <!-- Background with gradient overlay -->
 <div class="background-container">
-    <div class="background"></div>
+    <div class="background"></div> <!-- Background image -->
     <div class="gradient-overlay"></div>
 </div>
 
 <div class="container">
-    <!-- Top Icons -->
+    <!-- Social icons (Instagram and GitHub) -->
     <div class="top-icons">
         <a href="https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
             <img src="/instaSign.png" alt="Instagram"/>
@@ -32,15 +31,21 @@
 </div>
 
 <style>
+
+:global(body.dark) .background {
+    /* Switching to dark mode background when 'dark' class is on body */
+    background-image: url('/Self portrait dark.png');
+}
+
 :global(html, body) {
+    /* Remove spacing and full height */
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
+/* Container for centered text*/
 .container {
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -48,18 +53,18 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    z-index: 1; /* Above background */
+    z-index: 1; 
 }
 
-/* Background */
+/* Fixed background image and gradient */
 .background-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    pointer-events: none;
+    z-index: -1; 
+    pointer-events: none; /* clicks*/
 }
 
 .background {
@@ -79,7 +84,7 @@
     background: linear-gradient(to bottom, transparent 0%, rgba(164, 181, 195, 1) 100%);
 }
 
-/* Title */
+/* Title section */
 .title-container {
     position: fixed; 
     text-align: left;
@@ -91,7 +96,7 @@
 .title {
     color: #eae0dc;
     font-family: 'Yeseva One', serif;
-    font-size: clamp(3rem, 9vw, 7rem);
+    font-size: clamp(3rem, 9vw, 7rem); 
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
@@ -107,7 +112,7 @@
     margin-top: 0.3rem;
 }
 
-/* Top Icons */
+/* Social icons column */
 .top-icons {
     position: fixed;
     top: 45.5%;
@@ -115,39 +120,39 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    z-index: 10;
+    z-index: 10; /* Above other content */
 }
 
 .icon img {
     width: clamp(40px, 3vw, 50px);
     height: clamp(40px, 3vw, 50px);
-    filter: drop-shadow(0 2px 10px #eae0dc);
+    filter: drop-shadow(0 2px 10px #eae0dc); /* Glow effect */
     transition: transform 0.3s ease;
 }
 
 .icon:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2); /* zoom on hover */
 }
 
-    /* Tablet Landscape and Large Phones */
-    @media (max-width: 1024px) and (min-width: 769px) {
-        .title {
-            font-size: 4.5rem;
-        }
-        
-        .subtitle {
-            font-size: 1.8rem;
-        }
-        .top-icons {
-        top: 57.0%;
-        right: 5.5%;
-       }
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .title {
+        font-size: 4.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
     }
 
-/* Responsive tweaks */
+    .top-icons {
+        top: 57.0%;
+        right: 5.5%;
+    }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
     .top-icons {
-        position: fixed;
         top: 55.5%;
     }
 
@@ -157,7 +162,6 @@
 }
 
 @media (max-width: 480px) {
-    
     .title {
         font-size: 2.8rem;
         line-height: 1.2;
@@ -169,10 +173,9 @@
     }
 
     .top-icons {
-        position: fixed;
         gap: 0.8rem;
         top: 35.5%;
-        left: -250px;  
-         }
+        left: -250px;
+    }
 }
 </style>

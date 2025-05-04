@@ -1,44 +1,50 @@
 <script> 
-  import { onMount } from 'svelte';
-  import { fly } from 'svelte/transition';
+  import { onMount } from 'svelte'; // Lifecycle function to run code when component mounts
+  import { fly } from 'svelte/transition'; // Importing fly transition from Svelte for animation
 
+  // Log message when Contact page is loaded
   onMount(() => {
     console.log("Contact Page Loaded");
   });
 </script>
 
-<!-- Animated Wrapper -->
+<!-- Main container, fly-in transition -->
 <div in:fly={{ y: 200, duration: 600 }}>
   <section class="contact-container">
 
-    <!-- Contact Heading -->
+    <!-- Header section  -->
     <div class="contact-header">
       <div class="header-row">
-        <h1>CONTACT</h1>
-        <a href="/" class="icon">
-          <img src="/website-logo.png" alt="Website Logo" />
+        <h1>CONTACT</h1> <!-- Main heading -->
+        <a href="/" class="icon"> <!-- Link back to homepage -->
+          <img src="/website-logo.png" alt="Website Logo" /> <!-- Website logo -->
         </a>
       </div>
-      <p>LET'S WORK TOGETHER!</p>
+      <p>LET'S WORK TOGETHER!</p> <!-- Subtitle -->
     </div>
 
-    <!-- FOOTER WRAPPER (animated, not fixed) -->
+    <!-- Animated footer section -->
     <div class="footer-wrapper" in:fly={{ y: 100, duration: 700, delay: 200 }}>
       <footer class="contact-footer">
+        
+        <!-- name at the top of the footer -->
         <div class="footer-name">SOLOMIYA<br />DATSKIV</div>
 
+        <!-- Column with programming projects -->
         <div class="footer-column">
           <h3>MY PROGRAMMING PROJECTS</h3>
           <p><a href="https://solomiya-datskiv.codeberg.page/flatland-UI-design-project/">Flatland UI Design</a></p>
           <p><a href="https://ui-programming-24-25.codeberg.page/Solomiya_Datskiv_CO0301892-UI-Programming-Module-Project/">UI Programming Module</a></p>
         </div>
 
+        <!-- Column with social links -->
         <div class="footer-column">
           <h3>LET'S CONNECT</h3>
           <p><a href="https://instagram.com">📷 Instagram</a></p>
           <p><a href="https://github.com/MiyaDatskiv">🌐 GitHub</a></p>
         </div>
 
+        <!-- Column with contact information -->
         <div class="footer-column">
           <h3>GET IN TOUCH</h3>
           <p><a href="mailto:mia.datskiv@gmail.com">💌 mia.datskiv@gmail.com</a></p>
@@ -46,6 +52,7 @@
         </div>
       </footer>
 
+      <!-- Footer disclaimer -->
       <p class="footer-note" in:fly={{ y: 30, duration: 600, delay: 800 }}>
         BTW: STEALING IDEAS AND ART IS BAD FOR YOUR KARMA. DON'T BE LIKE THIS :)
       </p>
@@ -54,12 +61,13 @@
 </div>
 
 <style>
-/* ===== CONTACT HEADER ===== */
+/* ===== CONTACT HEADER STYLES ===== */
 .contact-header {
   padding: 0 0rem;
   text-align: left;
 }
 
+/* Flex container for the header row */
 .header-row {
   display: flex;
   margin-top: -50px;
@@ -69,6 +77,7 @@
   gap: 1rem;
 }
 
+/* Main heading style */
 .contact-header h1 {
   font-family: 'Yeseva One', serif;
   font-size: 7rem;
@@ -77,6 +86,7 @@
   color: black;
 }
 
+/* Subtitle under the heading */
 .contact-header p {
   font-family: 'Cherry Cream Soda', cursive;
   font-size: 1.0rem;
@@ -85,7 +95,7 @@
   margin-top: -1rem;
 }
 
-/* ===== ICON ===== */
+/* ===== ICON LOGO STYLES ===== */
 .icon img {
   width: 130px;
   height: auto;
@@ -94,6 +104,7 @@
   transition: transform 0.3s ease;
 }
 
+/* Enlarging logo on hover */
 .icon:hover img {
   transform: scale(1.1);
 }
@@ -104,7 +115,7 @@
   z-index: 1;
 }
 
-/* ===== FOOTER SECTION ===== */
+/* ===== FOOTER STYLES ===== */
 .contact-footer {
   position: relative;
   display: flex;
@@ -119,7 +130,7 @@
   flex-wrap: wrap;
 }
 
-/* Position the name above the columns */
+/* name in center top of footer */
 .footer-name {
   position: absolute;
   top: 2rem;
@@ -134,12 +145,14 @@
   text-align: left;
 }
 
+/* Footer content column */
 .footer-column {
   margin-top: 6rem;
   max-width: 250px;
   text-align: left;
 }
 
+/* Footer column heading */
 .footer-column h3 {
   font-family: 'Cherry Cream Soda', cursive;
   font-size: 1.2rem;
@@ -147,6 +160,7 @@
   text-transform: uppercase;
 }
 
+/* Footer links */
 .footer-column a {
   color: white;
   text-decoration: none;
@@ -166,7 +180,7 @@
   bottom: 0%;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 768px) {
   .contact-header {
     margin-top: 10px;
@@ -216,7 +230,7 @@
     justify-content: space-between;
   }
 
-  /* FIXED FOOTER ON MOBILE */
+  /* Fixed footer layout on mobile */
   .contact-footer {
     position: fixed;
     bottom: 0;

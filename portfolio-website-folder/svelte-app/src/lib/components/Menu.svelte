@@ -30,6 +30,20 @@
 {/if}
 
 <style>
+	:global(body.dark) .menu-overlay {
+		background: radial-gradient(circle at right, rgba(111, 9, 9, 0.8), #011323);
+}
+
+:global(body.dark) .menu-overlay,
+:global(body.dark) .overlay-links a,
+:global(body.dark) .sub-links a {
+	color: white;
+}
+
+:global(body.dark) .close-btn {
+	color: white;
+}
+
 .menu-overlay {
 		position: fixed;
 		inset: 0;
@@ -98,7 +112,7 @@
 		letter-spacing: 1px;
 	}
 
-	/* Mobile-specific adjustments */
+	/* Mobile adjustments */
 	@media (max-width: 768px) {
 
         .close-btn {
@@ -129,7 +143,7 @@
 		}
 	}
 
-	/* Very small devices */
+	/* small devices */
 	@media (max-width: 480px) {
 
         .overlay-links {

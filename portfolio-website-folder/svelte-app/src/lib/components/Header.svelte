@@ -1,20 +1,32 @@
-<script>  
-    import { Navigation } from "$lib";
+<script>
+	import { Navigation } from "$lib";
+
+	let checked = false;
+	let themeIcon = "/LightModeSign.png"; // default icon
+
+	function toggleTheme() {
+		checked = !checked;
+		document.body.classList.toggle("dark", checked);
+		themeIcon = checked ? "/MoonIcon.png" : "/LightModeSign.png"; // swap image
+	}
 </script>
 
-<header>
-    <!-- Navigation -->
-    <Navigation />
 
-    <!-- Theme Switcher (Right) -->
-    <div class="theme-toggle">
-        <img src="/LightModeSign.png" alt="Light Mode">
-        <input type="checkbox" id="themeSwitch">
-        <label for="themeSwitch"></label>
-    </div>
+
+<header>
+	<Navigation />
+
+	<div class="theme-toggle">
+		<img src={themeIcon} alt="Theme Icon" class="theme-icon" />
+		<input type="checkbox" id="themeSwitch" on:change={toggleTheme} />
+		<label for="themeSwitch"></label>
+	</div>
 </header>
 
+
 <style>
+
+
     /* Header Styling */
     header {
         display: flex;
@@ -43,7 +55,7 @@
     .theme-toggle label {
         width: 40px;
         height: 20px;
-        background: #ddd;
+        background: #acacac;
         border-radius: 10px;
         display: inline-block;
         position: relative;
@@ -70,6 +82,10 @@
         left: 20px;
         background: #fff;
     }
+    .theme-icon{
+        width: 30px;
+		height: 30px; 
+    }
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
@@ -84,7 +100,13 @@
             order: 3;
         }
         img{
-            scale: 0.5;
+            scale: 0.8;
         }
+
+	.theme-toggle {
+		gap: 10px;
+	}
+
+
     }
 </style>
