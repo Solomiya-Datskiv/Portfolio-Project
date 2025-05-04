@@ -14,8 +14,8 @@
     <div class="image-wrapper">
         <img src="/portfolio-picture.png" alt="Solomiya Photograph" class="about-image">
         <h1 class="about-title">ABOUT</h1>
-        <p class="about-subtitle1">HI! I'M SOLOMIYA, ARTIST AND</p>
-        <p class="about-subtitle2"> DESIGNER BASED IN IRELAND</p>
+        <p class="about-subtitle1">HI! I'M SOLOMIYA, ARTIST AND
+           DESIGNER BASED IN IRELAND</p>
       </div>
 
     <div class="about-text">
@@ -39,10 +39,9 @@
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Digital Illustration </section></li>
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Adobe Creative Suite </section></li>
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Figma, Penpot, Canva </section></li>
-            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Animation/Storyboarding </section></li>
+            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Animation/ Storyboarding </section></li>
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> UI Design </section></li>
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Graphic Design </section></li>
-            <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> Microsoft Office </section></li>
             <li><section class="bulletpoint"> <img src="/bulletpoint.png" alt="bulletpoint"> UI Programming </section></li>
         </ul>
         
@@ -54,17 +53,19 @@
 </div>
 
 <style>
-    .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #a4b5c3;
-        background-size: 100%;
-        background-position: center;
-        z-index: -1;
-    }
+.background {
+    position: fixed; /* Use fixed instead of absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; /* Ensure it fills at least the viewport */
+    background: #a4b5c3;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 
 
 .about-container {
@@ -73,7 +74,7 @@
     grid-template-areas:
         "image text"
         "image aside";
-    gap: 60px;
+    gap: 80px;
     align-items: left;
 
     padding-bottom: 0px;
@@ -105,16 +106,6 @@
  font-family: 'Cherry Cream Soda', cursive; 
   position: absolute;
   top: 25%;
-  left: 1%;
-  font-size: 1.2em;
-  color: white;
-  text-align: left;
-}
-
-.about-subtitle2 {
- font-family: 'Cherry Cream Soda', cursive; 
-  position: absolute;
-  top: 29%;
   left: 1%;
   font-size: 1.2em;
   color: white;
@@ -174,65 +165,117 @@ h2{
     text-shadow: 15px 5px 15px #eae0dc;
 }
 
+    /* Large Tablets / Small Laptops */
+@media (max-width: 1280px) {
+  .about-container {
+    gap: 50px;
+  }
+
+  .about-title {
+    font-size: 4rem;
+  }
+
+  .about-subtitle1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+
+  .skills-list {
+    font-size: 0.85rem;
+  }
+}
+
+
+    /* Tablet Landscape and Large Phones */
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .about-title {
+    font-size: 4.5rem;
+    text-align: left;
+
+  }
+
+  .about-subtitle1{
+    font-size: 0.8rem;
+    position: absolute;
+  top: 80%;
+  left: 1%;
+  }
+    }
 
 @media (max-width: 768px) {
-  .about-container {    
-    overflow: scroll;
+  .about-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
     padding: 1rem;
+    padding-top: 2rem;
+    gap: 1rem;
   }
 
   .image-wrapper {
     position: relative;
-    margin-top: 0;
-    text-align: center;
-  }
-
-  .about-title {
-    text-align: left;
-
-    font-size: 3rem;
-    top: 10px;
-    left: 50%;
-    text-shadow: 4px 2px 2px #000;
-  }
-
-  .about-subtitle1,
-  .about-subtitle2 {
-    font-size: 1rem;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    position: relative;
-    margin-top: 0.5rem;
-    text-align: left;
-  }
-
-  .about-subtitle2 {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
     margin-bottom: 1rem;
   }
 
   .about-image {
     width: 90%;
-    margin-top: 2rem;
-    border-radius: 10px;
+    max-width: 200px;
+  }
+
+  .about-title {
+    font-size: 4.5rem;
+    text-align: left;
+    text-shadow: 4px 2px 2px #000;
+
+  }
+
+  
+  .about-subtitle1{
+    font-size: 0.8rem;
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    width: 60%;
+
   }
 
   .about-text,
   .about-aside {
-    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
     padding: 0 1rem;
   }
 
-  .skills-list {
-    columns: 1;
+  h2 {
+    font-size: 1.0rem;
+    text-align: left;
   }
 
-  h2 {
-    font-size: 2rem;
-    text-align: left;
+  .skills-list {
+    
+    columns: 2;
+    font-size: 0.7rem;
+  }
+
+  .skills-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+  .bulletpoint img {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -242,14 +285,20 @@ h2{
     font-size: 2.5rem;
   }
 
-  .about-subtitle1,
-  .about-subtitle2 {
-    font-size: 0.9rem;
+  .about-subtitle1{
+    color: white;
+    font-family: 'Cherry Cream Soda', cursive;
+    font-size: 0.8rem;
+    text-align: left;
+    width: 80%;
   }
 
   .skills-list {
     font-size: 0.9rem;
   }
+
+
+
 }
 
 </style>

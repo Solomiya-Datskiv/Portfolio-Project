@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-    import { Card } from '$lib';
 
     onMount(() => {
         console.log("Home Page Loaded");
@@ -42,7 +41,7 @@
 .container {
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -149,8 +148,8 @@
 @media (max-width: 768px) {
     .top-icons {
         position: fixed;
-        top: 35.5%;
-        left: -550px;             /* Align with title's horizontal padding */    }
+        top: 55.5%;
+    }
 
     .title-container {
         padding-top: 3rem;
@@ -158,6 +157,7 @@
 }
 
 @media (max-width: 480px) {
+    
     .title {
         font-size: 2.8rem;
         line-height: 1.2;

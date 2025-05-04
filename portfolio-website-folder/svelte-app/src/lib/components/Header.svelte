@@ -74,6 +74,7 @@
     /* Mobile Responsive */
     @media (max-width: 768px) {
         header {
+        background: rgba(255, 255, 255, 0.5);
             padding: 0.3rem 1rem;
             margin: 10px auto;
             border-radius: 30px;
