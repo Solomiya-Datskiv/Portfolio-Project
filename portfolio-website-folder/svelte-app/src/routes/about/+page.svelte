@@ -1,4 +1,6 @@
 <script> 
+	import { base } from '$app/paths';
+
   import { onMount } from 'svelte';
 
   // Log message when About page is loaded
@@ -21,7 +23,7 @@
 
     <!-- Left image with title and subtitle -->
     <div class="image-wrapper">
-        <img src="/portfolio-picture.png" alt="Solomiya Photograph" class="about-image">
+        <img src="{base}/portfolio-picture.png" alt="Solomiya Photograph" class="about-image">
         <h1 class="about-title">ABOUT</h1>
         <p class="about-subtitle1">HI! I'M SOLOMIYA, ARTIST AND DESIGNER BASED IN IRELAND</p>
     </div>
@@ -30,17 +32,17 @@
     <div class="about-text">
         <h2>EDUCATION</h2>
         <li><section class="bulletpoint">
-            <img src="/bulletpoint.png" alt="bulletpoint"> Computing in Interactive Digital Art and Design<br>
+            <img src="{base}/bulletpoint.png" alt="bulletpoint"> Computing in Interactive Digital Art and Design<br>
             South East Technological University (Carlow, Ireland)
         </li>
 
         <li><section class="bulletpoint">
-            <img src="/bulletpoint.png" alt="bulletpoint"> Art with Animation Studies, Level 5<br>
+            <img src="{base}/bulletpoint.png" alt="bulletpoint"> Art with Animation Studies, Level 5<br>
             Ormonde College of Further Education (Kilkenny, Ireland)
         </li>
 
         <li><section class="bulletpoint">
-            <img src="/bulletpoint.png" alt="bulletpoint"> Design of Small Architectural Objects<br>
+            <img src="{base}/bulletpoint.png" alt="bulletpoint"> Design of Small Architectural Objects<br>
             Ivan Trush College of Applied Arts and Crafts (Lviv, Ukraine)
         </li>
     </div>
@@ -50,13 +52,13 @@
         <h2>SKILLS</h2>
         <ul class="skills-list">
             <!-- Skills list -->
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> Digital Illustration</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> Adobe Creative Suite</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> Figma, Penpot, Canva</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> Animation/ Storyboarding</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> UI Design</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> Graphic Design</section></li>
-            <li><section class="bulletpoint"><img src="/bulletpoint.png" alt="bulletpoint"> UI Programming</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> Digital Illustration</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> Adobe Creative Suite</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> Figma, Penpot, Canva</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> Animation/ Storyboarding</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> UI Design</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> Graphic Design</section></li>
+            <li><section class="bulletpoint"><img src="{base}/bulletpoint.png" alt="bulletpoint"> UI Programming</section></li>
         </ul>
     </aside>
 

@@ -1,4 +1,7 @@
 <script> 
+	import { base } from '$app/paths';
+  
+
   import { onMount } from 'svelte'; // Lifecycle function to run code when component mounts
   import { fly } from 'svelte/transition'; // Importing fly transition from Svelte for animation
 
@@ -16,8 +19,8 @@
     <div class="contact-header">
       <div class="header-row">
         <h1>CONTACT</h1> <!-- Main heading -->
-        <a href="/" class="icon"> <!-- Link back to homepage -->
-          <img src="/website-logo.png" alt="Website Logo" /> <!-- Website logo -->
+        <a href="{base}/" class="icon"> <!-- Link back to homepage -->
+          <img src="{base}/website-logo.png" alt="Website Logo" /> <!-- Website logo -->
         </a>
       </div>
       <p>LET'S WORK TOGETHER!</p> <!-- Subtitle -->
@@ -33,21 +36,21 @@
         <!-- Column with programming projects -->
         <div class="footer-column">
           <h3>MY PROGRAMMING PROJECTS</h3>
-          <p><a href="https://solomiya-datskiv.codeberg.page/flatland-UI-design-project/">Flatland UI Design</a></p>
-          <p><a href="https://ui-programming-24-25.codeberg.page/Solomiya_Datskiv_CO0301892-UI-Programming-Module-Project/">UI Programming Module</a></p>
+          <p><a href="{base}https://solomiya-datskiv.codeberg.page/flatland-UI-design-project/">Flatland UI Design</a></p>
+          <p><a href="{base}https://ui-programming-24-25.codeberg.page/Solomiya_Datskiv_CO0301892-UI-Programming-Module-Project/">UI Programming Module</a></p>
         </div>
 
         <!-- Column with social links -->
         <div class="footer-column">
           <h3>LET'S CONNECT</h3>
-          <p><a href="https://instagram.com">📷 Instagram</a></p>
-          <p><a href="https://github.com/MiyaDatskiv">🌐 GitHub</a></p>
+          <p><a href="{base}https://instagram.com">📷 Instagram</a></p>
+          <p><a href="{base}https://github.com/MiyaDatskiv">🌐 GitHub</a></p>
         </div>
 
         <!-- Column with contact information -->
         <div class="footer-column">
           <h3>GET IN TOUCH</h3>
-          <p><a href="mailto:mia.datskiv@gmail.com">💌 mia.datskiv@gmail.com</a></p>
+          <p><a href="{base}mailto:mia.datskiv@gmail.com">💌 mia.datskiv@gmail.com</a></p>
           <p>📞Phone: +353 852 882 303</p>
         </div>
       </footer>

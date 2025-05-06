@@ -1,5 +1,7 @@
-<script lang="ts">
-    import { fade, scale } from 'svelte/transition';
+<script lang="ts"> 
+	import { base } from '$app/paths';
+
+    import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
 
     let scrollContainer: HTMLElement | null = null;
@@ -7,26 +9,24 @@
     let currentCenterIndex = 0;
     let scrollProgress = 0;
 
-    let fullscreenImage: string | null = null; // store which image is open in fullscreen
-
     const imagesPaths = [
-        "/painting/painting1.jpg",
-        "/painting/painting2.jpg",
-        "/painting/painting3.png",
-        "/painting/painting4.jpg",
-        "/painting/painting5.jpg",
-        "/painting/painting6.JPG",
-        "/painting/painting7.jpg",
-        "/painting/painting8.jpg",
-        "/painting/painting9.jpg",
-        "/painting/painting10.jpg",
-        "/painting/painting11.jpg",
-        "/painting/painting12.jpg",
-        "/painting/painting13.jpg",
-        "/painting/painting14.jpg",
-        "/painting/painting15.jpg",
-        "/painting/painting16.JPG",
-        "/painting/painting17.jpg"
+"/painting/painting1.jpg",
+"/painting/painting2.jpg",
+"/painting/painting3.png",
+"/painting/painting4.jpg",
+"/painting/painting5.jpg",
+"/painting/painting6.JPG",
+"/painting/painting7.jpg",
+"/painting/painting8.jpg",
+"/painting/painting9.jpg",
+"/painting/painting10.jpg",
+"/painting/painting11.jpg",
+"/painting/painting12.jpg",
+"/painting/painting13.jpg",
+"/painting/painting14.jpg",
+"/painting/painting15.jpg",
+"/painting/painting16.JPG",
+"/painting/painting17.jpg"
     ];
 
     function scrollLeft() {
@@ -84,20 +84,6 @@
         }
     }
 
-    function openFullscreen(image: string) {
-        fullscreenImage = image;
-    }
-
-    function closeFullscreen() {
-        fullscreenImage = null;
-    }
-
-    function handleKeydown(event: KeyboardEvent) {
-        if (event.key === "Escape") {
-            closeFullscreen();
-        }
-    }
-
     onMount(() => {
         setTimeout(() => {
             if (scrollContainer) {
@@ -107,13 +93,12 @@
                         scrollToImage(0);
                     });
             }
-            window.addEventListener('keydown', handleKeydown);
         }, 0);
     });
 </script>
 
 <div transition:fade>
-    <h2>PAINTING</h2>
+    <h2>OTHER PROJECTS</h2>
 
     <div class="gallery-container">
         <button class="scroll-button left" on:click={scrollLeft}>&lt;</button>
@@ -128,7 +113,6 @@
                     src={image} 
                     alt="Painting {index + 1}"
                     class:center={index === currentCenterIndex}
-                    on:click={() => openFullscreen(image)}
                 />
             {/each}
         </section>
@@ -136,7 +120,7 @@
         <button class="scroll-button right" on:click={scrollRight}>&gt;</button>
     </div>
 
-    <!-- Custom Scrollbar -->
+    <!-- Scrollbar -->
     <input 
         type="range" 
         min="0" 
@@ -147,17 +131,12 @@
     />
 </div>
 
-{#if fullscreenImage}
-    <div class="fullscreen-overlay" on:click={closeFullscreen}>
-        <img src={fullscreenImage} alt="Fullscreen Painting" transition:scale={{ duration: 400 }} />
-    </div>
-{/if}
+
 
 <style>
 :global(body.dark) .scrollbar{
     background: #eae0dc;
 }
-
 
 h2 {
     padding: 0rem 3rem;
@@ -202,7 +181,7 @@ h2 {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 40px;
-    padding: 0 calc(50% - 200px);
+    padding: 0 calc(50% - 70px);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     height: 420px;
@@ -238,27 +217,7 @@ h2 {
     transform: scale(1.08);
 }
 
-/* Fullscreen Overlay */
-.fullscreen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: zoom-out;
-}
 
-.fullscreen-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
 
 /* Scrollbar Styling */
 .scrollbar {
@@ -266,6 +225,8 @@ h2 {
     margin: 1rem auto 0 auto;
     display: block;
     -webkit-appearance: none;
+    appearance: none;
+
     height: 8px;
     border-radius: 4px;
     background: #a4b5c3;
@@ -290,11 +251,9 @@ h2 {
     cursor: pointer;
 }
 
-
 @media (max-width: 1424px) {
     .artwork-gallery {
-        padding: 0 calc(50% - 200px);
-
+        padding: 0 calc(50% - 50px);
         gap: 20px;
         height: 320px;
     }
@@ -372,5 +331,4 @@ h2 {
         width: 95%;
     }
 }
-
 </style>

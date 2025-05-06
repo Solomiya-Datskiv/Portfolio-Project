@@ -1,4 +1,6 @@
 <script> 
+	import { base } from '$app/paths';
+
     import { onMount } from 'svelte';
     onMount(() => {
         console.log("Home Page Loaded");
@@ -14,11 +16,11 @@
 <div class="container">
     <!-- Social icons (Instagram and GitHub) -->
     <div class="top-icons">
-        <a href="https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
-            <img src="/instaSign.png" alt="Instagram"/>
+        <a href="{base}https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
+            <img src="{base}/instaSign.png" alt="Instagram"/>
         </a>
-        <a href="https://github.com/MiyaDatskiv" class="icon">
-            <img src="/githubSign.png" alt="GitHub"/>
+        <a href="{base}https://github.com/MiyaDatskiv" class="icon">
+            <img src="{base}/githubSign.png" alt="GitHub"/>
         </a>
     </div>
 

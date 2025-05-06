@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
+
 	import { page } from '$app/stores';
 	import MobileMenu from '$lib/components/Menu.svelte';
 
@@ -36,8 +39,8 @@
 				<!-- Center: Mobile Page Label or Logo with Selector -->
                 <li class="mobile-center">
                     {#if currentPath === '/'}
-                        <a href="/" class="nav-item selected">
-                            <img src="/website-logo.png" alt="Logo" class="mobile-logo" />
+                        <a href="{base}/" class="nav-item selected">
+                            <img src="{base}/website-logo.png" alt="Logo" class="mobile-logo" />
                         </a>
                     {:else}
                         <span class="nav-item selected">{currentPageLabel}</span>
@@ -46,16 +49,16 @@
 
 		<!-- Logo -->
 		<li class="logo-container">
-			<a href="/" class="nav-item logo {currentPath === '/' ? 'selected' : ''}">
-				<img src="/website-logo.png" alt="Website Logo" />
+			<a href="{base}/" class="nav-item logo {currentPath === '/' ? 'selected' : ''}">
+				<img src="{base}/website-logo.png" alt="Website Logo" />
 			</a>
 		</li>
 
 		<!-- Desktop Center Links -->
 		<div class="center-links">
-			<li><a href="/about" class="nav-item {currentPath === '/about' ? 'selected' : ''}">ABOUT</a></li>
-			<li><a href="/works" class="nav-item {currentPath === '/works' ? 'selected' : ''}">WORKS</a></li>
-			<li><a href="/contact" class="nav-item {currentPath === '/contact' ? 'selected' : ''}">CONTACT</a></li>
+			<li><a href="{base}/about" class="nav-item {currentPath === '/about' ? 'selected' : ''}">ABOUT</a></li>
+			<li><a href="{base}/works" class="nav-item {currentPath === '/works' ? 'selected' : ''}">WORKS</a></li>
+			<li><a href="{base}/contact" class="nav-item {currentPath === '/contact' ? 'selected' : ''}">CONTACT</a></li>
 		</div>
 	</ul>
 

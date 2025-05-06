@@ -1,4 +1,6 @@
 <script>
+    	import { base } from '$app/paths';
+
     // Importing onMount lifecycle function from Svelte.
     import { onMount } from 'svelte';
 
@@ -25,32 +27,32 @@
         <!-- Vertical label for category -->
         <span class="vertical-text">PAINTING</span>
         <!-- Clickable image linking to subpage -->
-        <a href="/painting">
-            <img src="/cliffs.jpg" alt="Painting" class="work-image">
+        <a href="{base}/painting">
+            <img src="{base}/cliffs.jpg" alt="Painting" class="work-image">
         </a>
     </div>
 
     <!-- Category: Drawing -->
     <div class="category">
         <span class="vertical-text">DRAWING</span>
-        <a href="/drawing">
-            <img src="/cranes.jpg" alt="Drawing" class="work-image">
+        <a href="{base}/drawing">
+            <img src="{base}/cranes.jpg" alt="Drawing" class="work-image">
         </a>
     </div>
 
     <!-- Category: Digital Art -->
     <div class="category">
         <span class="vertical-text">DIGITAL ART</span>
-        <a href="/digitalart">
-            <img src="/woman2d.jpg" alt="Digital Art" class="work-image">
+        <a href="{base}/digitalart">
+            <img src="{base}/woman2d.jpg" alt="Digital Art" class="work-image">
         </a>
     </div>
 
     <!-- Category: Other Projects -->
     <div class="category">
         <span class="vertical-text">OTHER PROJECTS</span>
-        <a href="/otherprojects">
-            <img src="/wood..JPG" alt="Other Projects" class="work-image">
+        <a href="{base}/otherprojects">
+            <img src="{base}/wood..JPG" alt="Other Projects" class="work-image">
         </a>
     </div>
 

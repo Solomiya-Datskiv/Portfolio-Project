@@ -1,16 +1,18 @@
 <script>
 	import { Navigation } from "$lib";
+  // import base to prefix local paths
+    import { base } from '$app/paths';
 
+    
 	let checked = false;
 	let themeIcon = "/LightModeSign.png"; // default icon
 
 	function toggleTheme() {
 		checked = !checked;
 		document.body.classList.toggle("dark", checked);
-		themeIcon = checked ? "/MoonIcon.png" : "/LightModeSign.png"; // swap image
+		themeIcon = checked ? "/MoonIcon.png" : "LightModeSign.png"; // swap image
 	}
 </script>
-
 
 
 <header>

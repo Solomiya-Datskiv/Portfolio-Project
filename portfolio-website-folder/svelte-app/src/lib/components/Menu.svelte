@@ -1,4 +1,7 @@
 <script lang="ts">
+	  // import base to prefix local paths
+	import { base } from '$app/paths';
+	
 	export let menuOpen: boolean;
 	export let closeMenu: () => void;
 </script>
@@ -9,22 +12,22 @@
 		<button class="close-btn" on:click={closeMenu}>✕</button>
 
 		<nav class="overlay-links">
-			<a href="/" on:click={closeMenu}>
+			<a href="{base}/" on:click={closeMenu}>
 				<span>Home</span>
-				<img src="/website-logo.png" alt="Logo" class="menu-logo" />
+				<img src="{base}/website-logo.png" alt="Logo" class="menu-logo" />
 			</a>
-			<a href="/about" on:click={closeMenu}>About</a>
-			<a href="/works" on:click={closeMenu}>Works</a>
+			<a href="{base}/about" on:click={closeMenu}>About</a>
+			<a href="{base}/works" on:click={closeMenu}>Works</a>
 
 			<!-- Sub-links under works -->
 			<div class="sub-links">
-				<a href="/painting" on:click={closeMenu}>Painting</a>
-				<a href="/drawing" on:click={closeMenu}>Drawing</a>
-				<a href="/digitalart" on:click={closeMenu}>Digital Art</a>
-				<a href="/otherprojects" on:click={closeMenu}>Other Projects</a>
+				<a href="{base}/painting" on:click={closeMenu}>Painting</a>
+				<a href="{base}/drawing" on:click={closeMenu}>Drawing</a>
+				<a href="{base}/digitalart" on:click={closeMenu}>Digital Art</a>
+				<a href="{base}/otherprojects" on:click={closeMenu}>Other Projects</a>
 			</div>
 
-			<a href="/contact" on:click={closeMenu}>Contact</a>
+			<a href="{base}/contact" on:click={closeMenu}>Contact</a>
 		</nav>
 	</div>
 {/if}

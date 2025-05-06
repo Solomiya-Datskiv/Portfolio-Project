@@ -1,13 +1,13 @@
-<script lang="ts">
-    import { fade, scale } from 'svelte/transition';
+<script lang="ts"> 
+	import { base } from '$app/paths';
+
+    import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
 
     let scrollContainer: HTMLElement | null = null;
     let images: HTMLImageElement[] = [];
     let currentCenterIndex = 0;
     let scrollProgress = 0;
-
-    let fullscreenImage: string | null = null; // store which image is open in fullscreen
 
     const imagesPaths = [
         "/otherprojects/project1.JPG",
@@ -17,7 +17,6 @@
         "/otherprojects/project5.jpg",
         "/otherprojects/project6.jpg",
         "/otherprojects/project7.jpg"
-
     ];
 
     function scrollLeft() {
@@ -75,20 +74,6 @@
         }
     }
 
-    function openFullscreen(image: string) {
-        fullscreenImage = image;
-    }
-
-    function closeFullscreen() {
-        fullscreenImage = null;
-    }
-
-    function handleKeydown(event: KeyboardEvent) {
-        if (event.key === "Escape") {
-            closeFullscreen();
-        }
-    }
-
     onMount(() => {
         setTimeout(() => {
             if (scrollContainer) {
@@ -98,7 +83,6 @@
                         scrollToImage(0);
                     });
             }
-            window.addEventListener('keydown', handleKeydown);
         }, 0);
     });
 </script>
@@ -119,7 +103,6 @@
                     src={image} 
                     alt="Painting {index + 1}"
                     class:center={index === currentCenterIndex}
-                    on:click={() => openFullscreen(image)}
                 />
             {/each}
         </section>
@@ -138,11 +121,7 @@
     />
 </div>
 
-{#if fullscreenImage}
-    <div class="fullscreen-overlay" on:click={closeFullscreen}>
-        <img src={fullscreenImage} alt="Fullscreen Painting" transition:scale={{ duration: 400 }} />
-    </div>
-{/if}
+
 
 <style>
 :global(body.dark) .scrollbar{
@@ -228,27 +207,7 @@ h2 {
     transform: scale(1.08);
 }
 
-/* Fullscreen Overlay */
-.fullscreen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: zoom-out;
-}
 
-.fullscreen-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
 
 /* Scrollbar Styling */
 .scrollbar {
@@ -256,6 +215,8 @@ h2 {
     margin: 1rem auto 0 auto;
     display: block;
     -webkit-appearance: none;
+    appearance: none;
+
     height: 8px;
     border-radius: 4px;
     background: #a4b5c3;
