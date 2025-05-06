@@ -36,15 +36,15 @@
         <!-- Column with programming projects -->
         <div class="footer-column">
           <h3>MY PROGRAMMING PROJECTS</h3>
-          <p><a href="{base}https://solomiya-datskiv.codeberg.page/flatland-UI-design-project/">Flatland UI Design</a></p>
-          <p><a href="{base}https://ui-programming-24-25.codeberg.page/Solomiya_Datskiv_CO0301892-UI-Programming-Module-Project/">UI Programming Module</a></p>
+          <p><a href="https://solomiya-datskiv.codeberg.page/flatland-UI-design-project/">Flatland UI Design</a></p>
+          <p><a href="https://ui-programming-24-25.codeberg.page/Solomiya_Datskiv_CO0301892-UI-Programming-Module-Project/">UI Programming Module</a></p>
         </div>
 
         <!-- Column with social links -->
         <div class="footer-column">
           <h3>LET'S CONNECT</h3>
-          <p><a href="{base}https://instagram.com">📷 Instagram</a></p>
-          <p><a href="{base}https://github.com/MiyaDatskiv">🌐 GitHub</a></p>
+          <p><a href="https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==">📷 Instagram</a></p>
+          <p><a href="https://github.com/MiyaDatskiv">🌐 GitHub</a></p>
         </div>
 
         <!-- Column with contact information -->

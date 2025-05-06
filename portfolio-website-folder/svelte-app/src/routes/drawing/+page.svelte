@@ -9,22 +9,23 @@
     let currentCenterIndex = 0;
     let scrollProgress = 0;
 
-    const imagesPaths = [
-"/drawing/drawing1.jpg",
-"/drawing/drawing2.jpg",
-"/drawing/drawing3.jpg",
-"/drawing/drawing4.jpg",
-"/drawing/drawing5.jpg",
-"/drawing/drawing6.jpg",
-"/drawing/drawing7.jpg",
-"/drawing/drawing8.JPG",
-"/drawing/drawing9.JPG",
-"/drawing/drawing10.JPG",
-"/drawing/drawing11.JPG",
-"/drawing/drawing12.jpg",
-"/drawing/drawing13.jpg",
-"/drawing/drawing14.jpg"
-    ];
+    const imagesPaths = [ 
+    `${base}/drawing/drawing1.jpg`,
+    `${base}/drawing/drawing2.jpg`,
+    `${base}/drawing/drawing3.jpg`,
+    `${base}/drawing/drawing4.jpg`,
+    `${base}/drawing/drawing5.jpg`,
+    `${base}/drawing/drawing6.jpg`,
+    `${base}/drawing/drawing7.jpg`,
+    `${base}/drawing/drawing8.JPG`,
+    `${base}/drawing/drawing9.JPG`,
+    `${base}/drawing/drawing10.JPG`,
+    `${base}/drawing/drawing11.JPG`,
+    `${base}/drawing/drawing12.jpg`,
+    `${base}/drawing/drawing13.jpg`,
+    `${base}/drawing/drawing14.jpg`
+];
+
 
     function scrollLeft() {
         if (scrollContainer && images.length > 0) {

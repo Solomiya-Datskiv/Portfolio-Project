@@ -9,16 +9,17 @@
     let currentCenterIndex = 0;
     let scrollProgress = 0;
 
-    const imagesPaths = [
-"/digitalart/art1.jpg",
-"/digitalart/art2.jpg",
-"/digitalart/art3.png",
-"/digitalart/art4.png",
-"/digitalart/art5.png",
-"/digitalart/art6.png",
-"/digitalart/art7.jpg",
-"/digitalart/art8.jpg"
-    ];
+    const imagesPaths = [ 
+    `${base}/digitalart/art1.jpg`,
+    `${base}/digitalart/art2.jpg`,
+    `${base}/digitalart/art3.png`,
+    `${base}/digitalart/art4.png`,
+    `${base}/digitalart/art5.png`,
+    `${base}/digitalart/art6.png`,
+    `${base}/digitalart/art7.jpg`,
+    `${base}/digitalart/art8.jpg`
+];
+
 
     function scrollLeft() {
         if (scrollContainer && images.length > 0) {

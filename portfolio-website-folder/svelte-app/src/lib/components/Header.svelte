@@ -5,12 +5,12 @@
 
     
 	let checked = false;
-	let themeIcon = "/LightModeSign.png"; // default icon
+	let themeIcon = `${base}/LightModeSign.png`; // default icon
 
 	function toggleTheme() {
 		checked = !checked;
 		document.body.classList.toggle("dark", checked);
-		themeIcon = checked ? "/MoonIcon.png" : "LightModeSign.png"; // swap image
+        themeIcon = checked ? `${base}/MoonIcon.png` : `${base}/LightModeSign.png`;
 	}
 </script>
 

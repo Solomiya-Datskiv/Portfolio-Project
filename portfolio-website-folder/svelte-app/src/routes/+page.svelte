@@ -16,10 +16,10 @@
 <div class="container">
     <!-- Social icons (Instagram and GitHub) -->
     <div class="top-icons">
-        <a href="{base}https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
+        <a href="https://www.instagram.com/crdmnu?igsh=MTRnNXZveWc1enQzag==" class="icon">
             <img src="{base}/instaSign.png" alt="Instagram"/>
         </a>
-        <a href="{base}https://github.com/MiyaDatskiv" class="icon">
+        <a href="https://github.com/MiyaDatskiv" class="icon">
             <img src="{base}/githubSign.png" alt="GitHub"/>
         </a>
     </div>

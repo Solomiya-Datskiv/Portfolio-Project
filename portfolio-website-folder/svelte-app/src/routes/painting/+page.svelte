@@ -10,24 +10,25 @@
     let scrollProgress = 0;
 
     const imagesPaths = [
-"/painting/painting1.jpg",
-"/painting/painting2.jpg",
-"/painting/painting3.png",
-"/painting/painting4.jpg",
-"/painting/painting5.jpg",
-"/painting/painting6.JPG",
-"/painting/painting7.jpg",
-"/painting/painting8.jpg",
-"/painting/painting9.jpg",
-"/painting/painting10.jpg",
-"/painting/painting11.jpg",
-"/painting/painting12.jpg",
-"/painting/painting13.jpg",
-"/painting/painting14.jpg",
-"/painting/painting15.jpg",
-"/painting/painting16.JPG",
-"/painting/painting17.jpg"
-    ];
+    `${base}/painting/painting1.jpg`,
+    `${base}/painting/painting2.jpg`,
+    `${base}/painting/painting3.png`,
+    `${base}/painting/painting4.jpg`,
+    `${base}/painting/painting5.jpg`,
+    `${base}/painting/painting6.JPG`,
+    `${base}/painting/painting7.jpg`,
+    `${base}/painting/painting8.jpg`,
+    `${base}/painting/painting9.jpg`,
+    `${base}/painting/painting10.jpg`,
+    `${base}/painting/painting11.jpg`,
+    `${base}/painting/painting12.jpg`,
+    `${base}/painting/painting13.jpg`,
+    `${base}/painting/painting14.jpg`,
+    `${base}/painting/painting15.jpg`,
+    `${base}/painting/painting16.JPG`,
+    `${base}/painting/painting17.jpg`
+];
+
 
     function scrollLeft() {
         if (scrollContainer && images.length > 0) {

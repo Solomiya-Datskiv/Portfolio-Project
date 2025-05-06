@@ -10,14 +10,15 @@
     let scrollProgress = 0;
 
     const imagesPaths = [
-        "/otherprojects/project1.JPG",
-        "/otherprojects/project2.JPG",
-        "/otherprojects/project3.JPG",
-        "/otherprojects/project4.jpeg",
-        "/otherprojects/project5.jpg",
-        "/otherprojects/project6.jpg",
-        "/otherprojects/project7.jpg"
-    ];
+    `${base}/otherprojects/project1.JPG`,
+    `${base}/otherprojects/project2.JPG`,
+    `${base}/otherprojects/project3.JPG`,
+    `${base}/otherprojects/project4.jpeg`,
+    `${base}/otherprojects/project5.jpg`,
+    `${base}/otherprojects/project6.jpg`,
+    `${base}/otherprojects/project7.jpg`
+];
+
 
     function scrollLeft() {
         if (scrollContainer && images.length > 0) {

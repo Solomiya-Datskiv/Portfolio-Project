@@ -222,7 +222,7 @@
         .mobile-center {
 		display: block;
 		position: absolute;
-		left: 50%;
+		left: 48%;
 		text-align: center;
 		pointer-events: none;
 	}
@@ -235,7 +235,7 @@
 
 	@media (max-width: 480px) {
         .nav {
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
 
 		.menu-btn {
