@@ -1,0 +1,1 @@
+var s;const e=((s=globalThis.__sveltekit_1ne08nx)==null?void 0:s.base)??"/https://github.com/Solomiya-Datskiv/Portfolio-Project.git";var t;const o=((t=globalThis.__sveltekit_1ne08nx)==null?void 0:t.assets)??e;export{o as a,e as b};

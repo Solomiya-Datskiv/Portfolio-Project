@@ -1,0 +1,27 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/contact": [
+		"src/routes/+layout.js"
+	],
+	"/digitalart": [
+		"src/routes/+layout.js"
+	],
+	"/drawing": [
+		"src/routes/+layout.js"
+	],
+	"/otherprojects": [
+		"src/routes/+layout.js"
+	],
+	"/painting": [
+		"src/routes/+layout.js"
+	],
+	"/works": [
+		"src/routes/+layout.js"
+	]
+}

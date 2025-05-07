@@ -1,0 +1,108 @@
+/* ==============================
+   Global Styles with CSS Variables
+   ============================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Yeseva+One&family=Cherry+Cream+Soda&display=swap');
+
+
+   :root {
+
+        /* Font Variables */
+        --font-primary: 'Inter', sans-serif;
+        --font-h1: 'Yeseva One', serif;
+        --font-h2: 'Cherry Cream Soda', cursive;    
+
+    /* Color Variables */
+    --primary-color: #000000;
+    --background-color: #eae0dc;
+    --text-color: #333;
+    --link-hover-color: #731211;
+
+    /* Font Variables */
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Spacing Variables */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --max-width: 1200px;
+}
+
+
+/* ==============================
+   Global Reset - Ensures consistency across browsers
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Base Styles
+   ============================== */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: var(--line-height-base);
+}
+body.dark {
+    --background-color: #a4b5c3;
+}
+
+/* ==============================
+   Headings
+   ============================== */
+h1, h2, h3, h4, h5, h6 {
+    /*font-weight: bold;*/
+    margin-bottom: var(--spacing-small);
+}
+
+
+   h1 {
+    font-family: var(--font-h1);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--font-h2);
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+
+
+/* ==============================
+   Paragraphs
+   ============================== */
+p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* ==============================
+   Links
+   ============================== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+/* ==============================
+   Container - Layout Wrapping
+   ============================== */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
